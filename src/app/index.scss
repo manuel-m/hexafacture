@@ -1,0 +1,36 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+.input-xs:hover {
+  border-color: #66afe9
+}
+
+.input-xs {
+  cursor: pointer;
+  height: 24px;
+  padding: 0 3px;
+  font-size: 14px;
+  line-height: 1.0;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0) inset, 0 0 0 rgba(255, 255, 255, 0);
+}
+
+
+
+/* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

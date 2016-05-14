@@ -1,0 +1,153 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading text-capitalize">
+
+            <span>émetteur
+  </span>
+        </span>
+
+      </div>
+      <div class="panel-body">
+        <!--nom société-->
+        <div class="col-sm-4">
+          <div ng-form='subform_nomSociete'>
+            <div class="form-group" ng-class="{'has-error' : subform_nomSociete.$invalid}">
+              <label class="control-label" for="nomSociete">Nom société</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.emetteur.nom"
+                     ng-change="vm.change()"
+                     id="nomSociete"
+                     dr-errors
+                     placeholder="nom ..."
+                     required>
+            </div>
+          </div>
+        </div>
+        <!--SIRET-->
+        <div class="col-sm-4">
+          <div ng-form='subform_siret'>
+            <div class="form-group" ng-class="{'has-error' : subform_siret.$invalid}">
+              <label class="control-label" for="siret">SIRET</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.emetteur.siret"
+                     ng-change="vm.change()"
+                     id="siret"
+                     dr-errors
+                     placeholder="SIRET ..."
+                     required>
+            </div>
+          </div>
+        </div>
+
+        <!--TVA-->
+        <div class="col-sm-2">
+          <div ng-form='subform_tva'>
+            <div class="form-group" ng-class="{'has-error' : subform_tva.$invalid}">
+              <label class="control-label" for="tva">n° TVA </label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.emetteur.tva"
+                     ng-change="vm.change()"
+                     id="tva"
+                     placeholder="TVA ..."
+                     required>
+            </div>
+          </div>
+        </div>
+
+        <!--code APE-->
+        <div class="col-sm-2">
+          <div ng-form='subform_codeApe'>
+            <div class="form-group" ng-class="{'has-error' : subform_codeApe.$invalid}">
+              <label class="control-label" for="codeApe">Code APE</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.emetteur.codeApe"
+                     ng-change="vm.change()"
+                     id="codeApe"
+                     placeholder="code APE ..."
+                     required>
+            </div>
+          </div>
+        </div>
+
+        <!--adresse, coordonnées-->
+        <div class="row">
+          <div class="col-sm-12">
+            <hr>
+            <!--adresse-->
+            <div class="col-sm-4">
+              <div ng-form='subform_adresse'>
+                <div class="form-group" ng-class="{'has-error' : subform_adresse.$invalid}">
+                  <label class="control-label" for="adresse">Adresse</label>
+                  <input type="text"
+                         class="form-control input-xs"
+                         ng-model="vm.d.emetteur.adresse"
+                         ng-change="vm.change()"
+                         id="adresse"
+                         placeholder="adresse ..."
+                         required>
+                </div>
+              </div>
+            </div>
+
+            <!--tél-->
+            <div class="col-sm-2">
+              <div ng-form='subform_tel'>
+                <div class="form-group" ng-class="{'has-error' : subform_tel.$invalid}">
+                  <label class="control-label" for="tel">Téléphone</label>
+                  <input type="text"
+                         class="form-control input-xs"
+                         ng-model="vm.d.emetteur.tel"
+                         ng-change="vm.change()"
+                         id="tel"
+                         dr-errors
+                         placeholder="tél ..."
+                         required>
+                </div>
+              </div>
+            </div>
+
+            <!--fax-->
+            <div class="col-sm-2">
+              <div ng-form='subform_fax'>
+                <div class="form-group" ng-class="{'has-error' : subform_fax.$invalid}">
+                  <label class="control-label" for="tel">FAX</label>
+                  <input type="text"
+                         class="form-control input-xs"
+                         ng-model="vm.d.emetteur.fax"
+                         ng-change="vm.change()"
+                         id="fax"
+                         dr-errors
+                         placeholder="FAX ..."
+                         required>
+                </div>
+              </div>
+            </div>
+
+            <!--email-->
+            <div class="col-sm-4">
+              <div ng-form='subform_email'>
+                <div class="form-group" ng-class="{'has-error' : subform_email.$invalid}">
+                  <label class="control-label" for="tel">E-mail</label>
+                  <input type="email"
+                         class="form-control input-xs"
+                         ng-model="vm.d.emetteur.email"
+                         ng-change="vm.change()"
+                         id="email"
+                         dr-errors
+                         placeholder="E-mail ..."
+                         required>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

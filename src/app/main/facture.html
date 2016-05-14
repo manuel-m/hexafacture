@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+            <span>
+            Facture
+              </span>
+
+      </div>
+      <div class="panel-body">
+        <!--référence facture-->
+        <div class="col-sm-2">
+          <div ng-form='subform_numFacture'>
+            <div class="form-group" ng-class="{'has-error' : subform_numFacture.$invalid}">
+              <label class="control-label" for="numFacture">Référence</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.facture.ref"
+                     ng-change="vm.change()"
+                     id="numFacture"
+                     placeholder="référence ..."
+                     required>
+            </div>
+          </div>
+        </div>
+        <!--date facture -->
+        <div class="col-sm-2">
+          <div ng-form='subform_dateFacture'>
+            <div class="form-group" ng-class="{'has-error' : subform_dateFacture.$invalid}">
+              <label class="control-label" for="dateFacture">Date</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.facture.date"
+                     ng-change="vm.change()"
+                     id="dateFacture"
+                     placeholder="date ..."
+                     required>
+            </div>
+          </div>
+        </div>
+
+        <!--mode de règlement-->
+        <div class="col-sm-4">
+          <div ng-form='subform_modeReglementFacture'>
+            <div class="form-group" ng-class="{'has-error' : subform_modeReglementFacture.$invalid}">
+              <label class="control-label" for="modeReglementFacture">Réglement</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.facture.modeReglement"
+                     ng-change="vm.change()"
+                     id="modeReglementFacture"
+                     placeholder="mode de règlement ..."
+                     required>
+            </div>
+          </div>
+        </div>
+
+        <!--taux TVA-->
+        <div class="col-sm-2">
+          <div ng-form='subform_tauxTVA'>
+            <div class="form-group" ng-class="{'has-error' : subform_tauxTVA.$invalid}">
+              <label class="control-label" for="tauxTVAFacture">Taux TVA</label>
+              <input type="number"
+                     class="form-control input-xs"
+                     ng-model="vm.d.facture.tauxTva"
+                     ng-change="vm.change()"
+                     id="tauxTVAFacture"
+                     dr-errors
+                     required>
+            </div>
+          </div>
+        </div>
+        <!--devise-->
+        <div class="col-sm-2">
+          <div ng-form='subform_devise'>
+            <div class="form-group" ng-class="{'has-error' : subform_devise.$invalid}">
+              <label class="control-label" for="devise">Devise</label>
+              <input type="text"
+                     class="form-control input-xs"
+                     ng-model="vm.d.facture.devise"
+                     ng-change="vm.change()"
+                     id="devise"
+                     dr-errors
+                     required>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

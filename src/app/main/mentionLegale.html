@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          <span>Mention légale
+
+  </span>
+      </div>
+      <div class="panel-body">
+
+        <!--valeur acompte -->
+        <div class="col-sm-12">
+          <div ng-form='subform_mentionLegale'>
+            <div class="form-group" ng-class="{'has-error' : subform_mentionLegale.$invalid}">
+              <label class="control-label" for="mentionLegale">Libellé</label>
+              <!--<input type="text"-->
+              <textarea class="form-control input-xs"
+                        rows="5"
+
+                        ng-model="vm.d.mentionLegale"
+                        ng-change="vm.change()"
+                        id="mentionLegale"
+                        placeholder="Mention légale ..."
+                        required>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

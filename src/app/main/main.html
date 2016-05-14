@@ -1,0 +1,22 @@
+<div class="container">
+  <p class="text-muted" style="text-align: right;font-size: 0.7em;padding: 0 0 0 0;margin: 0 0 0 0">
+    <span class="fa fa-copyright"></span> EFFICIEL TECHNOLOGIE
+  </p>
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+
+  <div ui-view></div>
+
+  <hr>
+
+  <div class="footer">
+    <p><a href="https://twitter.com/discoride_dev">@discoride_dev</a></p>
+  </div>
+
+<pre ng-if="vmRoot.isDev">
+vm.g.d:{{vm.g.d|json}}
+vmRoot:{{vmRoot|json}}
+</pre>
+
+
+</div>

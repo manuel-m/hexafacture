@@ -1,0 +1,95 @@
+<nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl as vmNavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+
+
+        <span class="text-muted">hexa</span>facture
+
+      </a>
+    </div>
+
+    <div class="navbar-collapse" id="bs-example-navbar-collapse-6">
+
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown" dropdown>
+          <a href class="dropdown-toggle" dropdown-toggle data-toggle="dropdownAction" role="button">
+            <span class="fa fa-file"></span>
+            &nbsp;Fichier
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="" ng-click="vm.p.generatePdf()">
+                <span class="{{vmRoot.TheIcons.print}}"></span>
+                &nbsp;Générer .pdf
+              </a>
+            </li>
+            <li>
+              <a href="" id="exportAll" ng-click="vm.g.doExport('exportAll')">
+                <span class="{{vmRoot.TheIcons.save}}">
+                  &nbsp;Exporter
+                </span>
+              </a>
+            </li>
+
+            <li ng-controller="UploaderCtrl as vmUploader">
+              <input type="file" id="uploaderId" style="display: none;">
+
+              <a href="" ng-click="vmUploader.clickLoad()">
+                <span class="{{vmRoot.TheIcons.load}}"></span>
+                &nbsp;Importer
+              </a>
+            </li>
+            <li>
+              <a href="" ng-click="vm.g.doReset()"><span class="{{vmRoot.TheIcons.remove}}"></span>
+                &nbsp;Nouveau
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown" dropdown>
+          <a href class="dropdown-toggle" dropdown-toggle data-toggle="dropdownNav" role="button">
+            <span class="fa fa-list-alt"></span> &nbsp;
+            <span class="text-capitalize">{{vmNavbar.currentLocation()}}</span>
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="o in vmNavbar.getItems()"
+                class="text-capitalize"
+                ng-class="{ active: vmNavbar.isActive(o)}">
+              <a ui-sref="devis.{{o[0]}}">{{o[1]}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right ">
+
+
+        <li>
+          <small>
+            <table
+              class="navbar-text pull-right">
+              <tr>
+                <td>Total HT</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;{{vm.g.xxFmt(vm.g.total('ht'))}} €</td>
+              </tr>
+              <tr>
+                <td>TVA&nbsp;{{vm.g.d.facture.tauxTva}}%</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;{{vm.g.xxFmt(vm.g.total('tva'))}} €</td>
+              </tr>
+              <tr>
+                <td>Total TTC</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;{{vm.g.xxFmt(vm.g.total('ttc'))}} €</td>
+              </tr>
+            </table>
+          </small>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

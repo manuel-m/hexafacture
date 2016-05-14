@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span class="text-capitalize">éléments</span>
+
+      <span class="btn-toolbar pull-right">
+        <button class="btn btn-xs btn-default" ng-click="vm.g.addNewItem()">
+          <span class="glyphicon glyphicon-plus-sign"></span> <b>Ajout</b>
+        </button>
+
+      </span>
+        </span>
+      </div>
+
+
+      <table class="table table-responsive table-condensed table-cursor" ng-if="vm.g.d.elements.length>0">
+        <tr>
+          <th class="col-sm-3">
+            <small>Réf</small>
+          </th>
+          <th class="col-sm-6">
+            <small>Désignation</small>
+          </th>
+          <th class="col-sm-1">
+            <small>Quantité</small>
+          </th>
+          <th class="col-sm-1">
+            <small>PU</small>
+          </th>
+          <th></th>
+        </tr>
+        <tbody>
+        <tr ng-repeat="o in vm.d.elements" class="xsmall">
+          <td>
+            <input type="text" class="form-control input-xs" ng-model="o.ref" required></td>
+          <td><input type="text" class="form-control input-xs" ng-change="vm.change()" ng-model="o.designation" required></td>
+          <td><input type="number" class="form-control  input-xs" ng-change="vm.change()" ng-model="o.q" required></td>
+          <td><input type="number" class="form-control input-xs" ng-change="vm.change()" ng-model="o.pu" required></td>
+          <td style="vertical-align: middle;">
+            <button class="btn btn-default btn-xs"
+                    ng-click="vm.g.deleteItem($index)">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!--</div>-->
+    </div>
+  </div>
+</div>
